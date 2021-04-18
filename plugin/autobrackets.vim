@@ -24,6 +24,8 @@ function! s:MatchBrackets(sign)
     return "}"
   elseif a:sign == '"'
     return '"'
+  elseif a:sign == '`'
+    return '`'
   else
     return -1
   endif
@@ -78,6 +80,7 @@ inoremap <expr> " AutoCloseBrackets('"')
 inoremap <expr> ( AutoCloseBrackets("(")
 inoremap <expr> { AutoCloseBrackets("{")
 inoremap <expr> [ AutoCloseBrackets("[")
+inoremap <expr> ` AutoCloseBrackets("`")
 inoremap <expr> ) AutoCloseBrackets(")")
 inoremap <expr> ] AutoCloseBrackets("]")
 inoremap <expr> } AutoCloseBrackets("}")
